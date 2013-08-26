@@ -1,0 +1,24 @@
+<T3DataStructure>
+        <meta>
+        </meta>
+<sheets>
+        <sDEFAULT>
+        <ROOT>
+                <TCEforms>
+                        <sheetTitle>Settings</sheetTitle>
+                </TCEforms>
+                <el>
+                        <view>
+                                <TCEforms>
+                                        <label>view:</label>
+                                        <config>
+                                            <type>input</type>
+                                            <size>2</size>
+                                        </config>
+                                </TCEforms>
+                        </view>
+                </el>
+        </ROOT>
+        </sDEFAULT>
+</sheets>
+</T3DataStructure>

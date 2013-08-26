@@ -1,0 +1,7 @@
+plugin.user_europeanicons_pi1 {
+    columns = 1
+    image {
+      file.maxW = 120
+    }
+  }
+}

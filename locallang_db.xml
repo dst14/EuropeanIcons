@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <type>database</type>
+        <description>Language labels for database tables/fields belonging to extension 'user_europeanicons'</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="user_europeanicons_icon">Image</label>
+            <label index="user_europeanicons_icon.name">Icon Name</label>
+            <label index="user_europeanicons_icon.image">Icon Image</label>
+            <label index="user_europeanicons_icon.author">Author</label>
+            <label index="user_europeanicons_icon.year">Year</label>
+            <label index="user_europeanicons_icon.place">Place</label>
+            <label index="user_europeanicons_icon.country">Country</label>
+            <label index="user_europeanicons_icon.linktocommons">Link to commons (Europeana, Wikimedia)</label>
+            <label index="user_europeanicons_occurences">Occurence of Image</label>
+            <label index="user_europeanicons_occurences.iconmm">Icon</label>
+            <label index="user_europeanicons_occurences.title">Title</label>
+            <label index="user_europeanicons_occurences.authors">Author(s)</label>
+            <label index="user_europeanicons_occurences.publisher">Publisher</label>
+            <label index="user_europeanicons_occurences.publishing_place">Place of Publishing</label>
+            <label index="user_europeanicons_occurences.reprint">Reprint/Edition</label>
+            <label index="user_europeanicons_occurences.year">Year</label>
+            <label index="user_europeanicons_occurences.first_published">Year of first imprint</label>
+            <label index="user_europeanicons_occurences.country">Country</label>
+            <label index="user_europeanicons_occurences.page">Page</label>
+            <label index="user_europeanicons_occurences.type_of_edit">Type of Edit/Crop</label>
+            <label index="user_europeanicons_occurences.type_of_repro">Type of Reproduction</label>
+            <label index="user_europeanicons_occurences.additional">Additional Information</label>
+            <label index="user_europeanicons_occurences.geisignatur">Shelf mark at GEI</label>
+            <label index="user_europeanicons_occurences.linktolibrary">Link to Item in Library Catalogue</label>
+            <label index="user_europeanicons_occurences.linktomore">Link to additional information (EurViews)</label>
+            <label index="user_europeanicons_occurences.pos_in_book">Position in the book</label>
+            <label index="user_europeanicons_occurences.context">Context of the Occurence</label>
+            <label index="user_europeanicons_occurences.size_of_image">Relative size of image</label>
+            <label index="tt_content.list_type_pi1">European Icons</label>
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="user_europeanicons_icon">Abbildung (Icon)</label>
+            <label index="user_europeanicons_icon.name">Bezeichnung der Abbildung</label>
+            <label index="user_europeanicons_icon.image">Bilddatei</label>
+            <label index="user_europeanicons_icon.author">Urheber</label>
+            <label index="user_europeanicons_icon.year">Jahr</label>
+            <label index="user_europeanicons_icon.place">Ort</label>
+            <label index="user_europeanicons_icon.country">Land</label>
+            <label index="user_europeanicons_icon.linktocommons">Link auf Commons (Europeana, Wikimedia)</label>
+            <label index="user_europeanicons_occurences">Icon-Fundstelle</label>
+            <label index="user_europeanicons_occurences.iconmm">Abbildung</label>
+            <label index="user_europeanicons_occurences.title">Titel</label>
+            <label index="user_europeanicons_occurences.authors">Autor(en)</label>
+            <label index="user_europeanicons_occurences.publisher">Verlag</label>
+            <label index="user_europeanicons_occurences.publishing_place">Verlagsort</label>
+            <label index="user_europeanicons_occurences.reprint">Nachdruck/Auflage</label>
+            <label index="user_europeanicons_occurences.year">Jahr</label>
+            <label index="user_europeanicons_occurences.first_published">Jahr der Erstauflage</label>
+            <label index="user_europeanicons_occurences.country">Land</label>
+            <label index="user_europeanicons_occurences.page">Seite</label>
+            <label index="user_europeanicons_occurences.type_of_edit">Beschnitt/Bearbeitung</label>
+            <label index="user_europeanicons_occurences.type_of_repro">Reproduktion</label>
+            <label index="user_europeanicons_occurences.additional">Zusätzliche Informationen</label>
+            <label index="user_europeanicons_occurences.geisignatur">Signatur am GEI</label>
+            <label index="user_europeanicons_occurences.linktolibrary">Link in den Bibliothekskatalog</label>
+            <label index="user_europeanicons_occurences.linktomore">Link zu Zusatztext (EurViews)</label>
+            <label index="user_europeanicons_occurences.pos_in_book">Position im Buch</label>
+            <label index="user_europeanicons_occurences.context">Informationen zum Kontext</label>
+            <label index="user_europeanicons_occurences.size_of_image">Relative Abbildungsgröße</label>
+            <label index="tt_content.list_type_pi1">European Icons</label>
+        </languageKey>
+    </data>
+</T3locallang>
