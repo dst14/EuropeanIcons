@@ -1,13 +1,13 @@
 .icons-iconswrap {
-
+    clear: left;
 }
 
 .icons-icontitle {
-
- }
+    font-weight: bold;
+}
 
 .icons-data {
-
+    float: left;
 }
 
 .icons-iconimage {
