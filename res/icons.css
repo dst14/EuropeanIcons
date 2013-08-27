@@ -1,15 +1,30 @@
 .icons-iconswrap {
     clear: left;
+    border: 1px #ccc solid;
+    background-color: #eee;
+    height: 100px;
+}
+
+.icons-icondescription {
+/ / float : left;
+    margin: 4px;
+    padding: 4px;
 }
 
 .icons-icontitle {
     font-weight: bold;
+    font-size: 115%;
 }
 
 .icons-data {
     float: left;
+
 }
 
 .icons-iconimage {
-
+    float: left;
+    margin: 4px;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px #ccc solid;
 }

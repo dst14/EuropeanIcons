@@ -1,7 +1,4 @@
-plugin.user_europeanicons_pi1 {
-    columns = 1
-    image {
-      file.maxW = 120
+ page.includeCSS {
+        europeanicons         = EXT:user_europeanicons/res/icons.css
+        europeanicons.media     = screen
     }
-  }
-}
