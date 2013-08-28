@@ -2,7 +2,7 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2009 ich@gei.de <ich@gei.de>
+ *  (c) 2013 Daniel Stange <stange@gei.de>
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -131,8 +131,7 @@ class user_europeanicons_pi1 extends tslib_pibase
 
         $result = $GLOBALS['TYPO3_DB']->exec_SELECT_mm_query(
             'user_europeanicons_occurences.title,user_europeanicons_occurences.publisher,user_europeanicons_occurences.publishing_place,user_europeanicons_occurences.year,user_europeanicons_occurences.reprint,user_europeanicons_occurences.first_published,user_europeanicons_occurences.country,user_europeanicons_occurences.authors,user_europeanicons_occurences.page,user_europeanicons_occurences.type_of_edit,user_europeanicons_occurences.type_of_repro,user_europeanicons_occurences.pos_in_book,user_europeanicons_occurences.additional,user_europeanicons_occurences.context,user_europeanicons_occurences.geisignatur,user_europeanicons_occurences.linktolibrary,user_europeanicons_occurences.linktomore,user_europeanicons_occurences.size_of_image,user_europeanicons_icon.uid',
-            'user_europeanicons_icon', 'user_europeanicons_icon_occurence_mm', 
-            'user_europeanicons_occurences', 
+            'user_europeanicons_occurences', 'user_europeanicons_icon_occurence_mm','user_europeanicons_icon',
             'AND user_europeanicons_icon.uid='.$iconID);
 
         while ($dbObject = mysql_fetch_object($result)) {
