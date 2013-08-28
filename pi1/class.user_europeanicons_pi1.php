@@ -46,6 +46,7 @@ class user_europeanicons_pi1 extends tslib_pibase
      * @param        array $conf: The PlugIn configuration
      * @return        The content that is displayed on the website
      */
+
     function main($content, $conf)
     {
         $this->conf = $conf;
@@ -53,24 +54,23 @@ class user_europeanicons_pi1 extends tslib_pibase
         $this->pi_loadLL();
 
 
-        $content = '';
+        if ($this->piVars['iconID']) {
+            $content = $this->singleView($this->piVars['iconID']);
+        } else {
+            $content = $this->iconsList();
+        }
 
-
-        $content .= $this->getIconsList(1);
-        /*$content.= $this->getOccurencesByIcon(1);
-
-        $content.= $this->showLibrary(1);
-        $content.= $this->showLibraryByTemplate(1);
-        */
         return $this->pi_wrapInBaseClass($content);
     }
 
-    function getIconsList()
+    function IconsList()
     {
         $content = '';
 
         $template = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icons.html');
-        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('name,author,image,year', 'user_europeanicons_icon', 'deleted=0 AND hidden=0', '', 'uid');
+        #$result=$GLOBALS['TYPO3_DB']->exec_SELECT_mm_query('user_europeanicons_occurences.*, user_europeanicons_icon.name','user_europeanicons_icon','user_europeanicons_icon_occurence_mm','user_europeanicons_occurences',"AND user_europeanicons_icon.uid=".$categoryID);
+
+        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('uid,name,author,image,year', 'user_europeanicons_icon', 'deleted=0 AND hidden=0', '', 'uid');
         while ($dbObject = mysql_fetch_object($result)) {
             $markerArray['###ICONTITLE###'] = $dbObject->name;
 
@@ -81,17 +81,52 @@ class user_europeanicons_pi1 extends tslib_pibase
             $imgConfig['file.']['maxH'] = 80;
             $bildadresse = $this->cObj->IMG_RESOURCE($imgConfig);
 
+            $markerArray['###ICONLINK###'] = $this->pi_linkTP('Fundstellen für diese Abbildung', array($this->prefixId .
+            '[iconID]' => $dbObject->uid));
+
+            //$markerArray['###LINK###']=$this->pi_linkTP($row['title'],array($this->prefixId.'[item]'=> $row['uid']));
+
             $markerArray['###ICONIMAGE###'] = "<img src='" . $bildadresse . "'>";
             $markerArray['###ICONAUTHOR###'] = $dbObject->author;
             $markerArray['###ICONYEAR###'] = $dbObject->year;
-            // TODO Insert Clickable Link for SingleView
             $content .= $this->cObj->substituteMarkerArrayCached($template, $markerArray);
         }
         return $content;
     }
 
+    function occurenceList($iconID)
+    {
+        $content = '';
+        $template = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icon-occurencelist.html');
+        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('uid,title', 'user_europeanicons_occurences', 'deleted=0 AND hidden=0 AND iconMM =' . $iconID, '', 'uid');
 
-    function buildSingleView($singleID)
+        while ($dbObject = mysql_fetch_object($result)) {
+            $markerArray['###OCCTITLE###'] = $dbObject->title;
+            $markerArray['###OCCPUBLISHER###'] = $dbObject->publisher;
+            $markerArray['###OCCPUBLPLACE###'] = $dbObject->publishing_place;
+            $markerArray['###OCCPUBLYEAR###'] = $dbObject->year;
+            $markerArray['###OCCREPR###'] = $dbObject->reprint;
+            $markerArray['###OCCFIRSTPUBL###'] = $dbObject->first_published;
+            $markerArray['###OCCCOUNTRY###'] = $dbObject->country;
+            $markerArray['###OCCAUTHORS###'] = $dbObject->authors;
+            $markerArray['###OCCPAGE###'] = $dbObject->page;
+            $markerArray['###OCCCROP###'] = $dbObject->type_of_edit;
+            $markerArray['###OCCREPRO###'] = $dbObject->type_of_repro;
+            $markerArray['###OCCPOSINBOOK###'] = $dbObject->pos_in_book;
+            $markerArray['###OCCADDITIONAL###'] = $dbObject->additional;
+            $markerArray['###OCCCONTEXT###'] = $dbObject->context;
+            $markerArray['###OCCSHELF###'] = $dbObject->geisignatur;
+            $markerArray['###OCCLIBLINK###'] = $dbObject->linktolibrary;
+            $markerArray['###OCCMORELINK###'] = $dbObject->linktomore;
+            $markerArray['###OCCSIZEOFIMG###'] = $dbObject->size_of_image;
+
+            $content .= $this->cObj->substituteMarkerArrayCached($template, $markerArray);
+        }
+
+        return $content;
+    }
+
+    function singleView($singleID)
     {
         /*   diese Funktion soll eine Einzelansicht erstellen
            * bestehend zunächst aus einer Einzelansicht der Bildikone
@@ -101,17 +136,16 @@ class user_europeanicons_pi1 extends tslib_pibase
 
         // initialisieren
 
-        $content = '';
         $param = $singleID;
-        $templateIcon = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icons.html');
-        $templateOccurence = $this->cObj->fileResource('EXT:user_europeanicons/res/template_occurence.html');
+        $templateOccurence = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icon-occurences.html');
 
 
         // Icon-Daten holen und in ein Objekt schreiben
 
-        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('name,author,image,year', 'user_europeanicons_icon', 'deleted=0 AND hidden=0 AND uid=".$param."', '', 'uid');
+        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('name,author,image,year,place,country,linktocommons,l18n_name,name_is_origname,technique,size,owner,owner_link,comment', 'user_europeanicons_icon', 'deleted=0 AND hidden=0 AND uid=' . $param, '', 'uid');
 
         while ($dbObject = mysql_fetch_object($result)) {
+            $markerArray['###ICONTITLE###'] = $dbObject->name;
             $markerArray['###ICONTITLE###'] = $dbObject->name;
 
             $pfad = 'uploads/user_europeanicons/' . $dbObject->image;
@@ -123,15 +157,30 @@ class user_europeanicons_pi1 extends tslib_pibase
             // TODO Skalieren ordentlich machen / Do scaling properly
             $bildadresse = $this->cObj->IMG_RESOURCE($imgConfig);
             //TODO lightbox für die Vergößerung / Integrate LightBox onClick
+
             $markerArray['###ICONIMAGE###'] = "<img src='" . $bildadresse . "'>";
             $markerArray['###ICONAUTHOR###'] = $dbObject->author;
             $markerArray['###ICONYEAR###'] = $dbObject->year;
+            $markerArray['###ICONPLACE###'] = $dbObject->place;
+            $markerArray['###ICONCOUNTRY###'] = $dbObject->country;
+            $markerArray['###ICONCOMMONS###'] = $dbObject->linktocommons;
+            $markerArray['###ICONTRANSLATEDNAME###'] = $dbObject->l18n_name;
+            $markerArray['###ICONISORIGNAME###'] = $dbObject->name_is_origname;
+            $markerArray['###ICONTECHNIQUE###'] = $dbObject->technique;
+            $markerArray['###ICONSIZE###'] = $dbObject->size;
+            $markerArray['###ICONOWNER###'] = $dbObject->owner;
+            $markerArray['###ICONOWNERLINK###'] = $dbObject->owner_link;
+            $markerArray['###ICONCOMMENT###'] = $dbObject->comment;
 
-            $content .= $this->cObj->substituteMarkerArrayCached($templateIcon, $markerArray);
+            $markerArray['###OCCURENCES###'] = $this->occurenceList($param);
+
+            $markerArray['###BACKLINK###'] = $this->pi_linkToPage('Zurück zur Übersicht', $this->id);
+
+            $content .= $this->cObj->substituteMarkerArrayCached($templateOccurence, $markerArray);
         }
 
 
-        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('name,author,image,year', 'user_europeanicons_icon', 'deleted=0 AND hidden=0 AND iconsmm=". $param ."', '', 'uid');
+        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('name,author,image,year', 'user_europeanicons_icon', 'deleted=0 AND hidden=0 AND iconsmm=' . $param, '', 'uid');
 
         while ($dbObject = mysql_fetch_object($result)) {
 
@@ -141,6 +190,7 @@ class user_europeanicons_pi1 extends tslib_pibase
             $content .= $this->cObj->substituteMarkerArrayCached($templateOccurence, $markerArray);
         }
 
+        debug($this->piVars);
         return $content;
 
         //
