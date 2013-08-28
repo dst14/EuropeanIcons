@@ -257,10 +257,10 @@ $TCA["user_europeanicons_occurences"] = array(
             "config" => Array(
                 "type" => "select",
                 "items" => Array(
-                    Array('vollständig', 'full'),
-                    Array('beschnitten', 'crop'),
-                    Array('Detail', 'detail'),
-                    Array('Rahmen', 'framed')
+                    Array('vollständig', 'vollständig'),
+                    Array('beschnitten', 'beschnitten'),
+                    Array('Detail', 'Detail'),
+                    Array('Rahmen', 'gerahmt')
                 )
             )
         ),
@@ -270,8 +270,8 @@ $TCA["user_europeanicons_occurences"] = array(
             "config" => Array(
                 "type" => "select",
                 "items" => Array(
-                    Array('farbig', 'color'),
-                    Array('schwarz-weiß', 'sw')
+                    Array('farbig', 'farbig'),
+                    Array('schwarz-weiß', 'schwarz-weiß')
                 )
             )
         ),
@@ -313,11 +313,11 @@ $TCA["user_europeanicons_occurences"] = array(
             "config" => Array(
                 "type" => "select",
                 "items" => Array(
-                    Array('Cover', 'cover'),
-                    Array('Kapiteleinstieg', 'opener'),
-                    Array('im Kapitel', 'chapter'),
-                    Array('auf Methodenseite', 'method'),
-                    Array('im Aufgabenteil', 'task')
+                    Array('Cover', 'Cover'),
+                    Array('Kapiteleinstieg', 'Kapiteleinstieg'),
+                    Array('im Kapitel', 'im Kapitel'),
+                    Array('auf Methodenseite', 'auf Methodenseite'),
+                    Array('im Aufgabenteil', 'im Aufgabenteil')
                 )
             )
         ),
@@ -327,9 +327,9 @@ $TCA["user_europeanicons_occurences"] = array(
             "config" => Array(
                 "type" => "select",
                 "items" => Array(
-                    Array('im Autorentext referenziert', 'text'),
-                    Array('in Aufgabe referenziert', 'task'),
-                    Array('illustrativ', 'illustration')
+                    Array('im Autorentext referenziert', 'im Autorentext referenziert'),
+                    Array('in Aufgabe referenziert', 'im Aufgabenteil referenziert'),
+                    Array('illustrativ', 'illustrativ')
                 )
             )
         ),
@@ -339,10 +339,10 @@ $TCA["user_europeanicons_occurences"] = array(
             "config" => Array(
                 "type" => "select",
                 "items" => Array(
-                    Array('ganzseitig', '1/1'),
-                    Array('halbseitig', '1/2'),
-                    Array('viertelseitig und kleiner', '1/4'),
-                    Array('marginal', 'margin')
+                    Array('ganzseitig', 'ganzseitig'),
+                    Array('halbseitig', 'halbseitig'),
+                    Array('viertelseitig und kleiner', 'viertelseitig und kleiner'),
+                    Array('marginal', 'als Marginalie')
                 )
             )
         ),

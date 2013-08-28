@@ -63,69 +63,6 @@ class user_europeanicons_pi1 extends tslib_pibase
         return $this->pi_wrapInBaseClass($content);
     }
 
-    function IconsList()
-    {
-        $content = '';
-
-        $template = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icons.html');
-        #$result=$GLOBALS['TYPO3_DB']->exec_SELECT_mm_query('user_europeanicons_occurences.*, user_europeanicons_icon.name','user_europeanicons_icon','user_europeanicons_icon_occurence_mm','user_europeanicons_occurences',"AND user_europeanicons_icon.uid=".$categoryID);
-
-        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('uid,name,author,image,year', 'user_europeanicons_icon', 'deleted=0 AND hidden=0', '', 'uid');
-        while ($dbObject = mysql_fetch_object($result)) {
-            $markerArray['###ICONTITLE###'] = $dbObject->name;
-
-            $pfad = 'uploads/user_europeanicons/' . $dbObject->image;
-            $imgConfig = array();
-            $imgConfig['file'] = $pfad;
-            $imgConfig['file.']['maxW'] = 120;
-            $imgConfig['file.']['maxH'] = 80;
-            $bildadresse = $this->cObj->IMG_RESOURCE($imgConfig);
-
-            $markerArray['###ICONLINK###'] = $this->pi_linkTP('Fundstellen für diese Abbildung', array($this->prefixId .
-            '[iconID]' => $dbObject->uid));
-
-            //$markerArray['###LINK###']=$this->pi_linkTP($row['title'],array($this->prefixId.'[item]'=> $row['uid']));
-
-            $markerArray['###ICONIMAGE###'] = "<img src='" . $bildadresse . "'>";
-            $markerArray['###ICONAUTHOR###'] = $dbObject->author;
-            $markerArray['###ICONYEAR###'] = $dbObject->year;
-            $content .= $this->cObj->substituteMarkerArrayCached($template, $markerArray);
-        }
-        return $content;
-    }
-
-    function occurenceList($iconID)
-    {
-        $content = '';
-        $template = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icon-occurencelist.html');
-        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('uid,title', 'user_europeanicons_occurences', 'deleted=0 AND hidden=0 AND iconMM =' . $iconID, '', 'uid');
-
-        while ($dbObject = mysql_fetch_object($result)) {
-            $markerArray['###OCCTITLE###'] = $dbObject->title;
-            $markerArray['###OCCPUBLISHER###'] = $dbObject->publisher;
-            $markerArray['###OCCPUBLPLACE###'] = $dbObject->publishing_place;
-            $markerArray['###OCCPUBLYEAR###'] = $dbObject->year;
-            $markerArray['###OCCREPR###'] = $dbObject->reprint;
-            $markerArray['###OCCFIRSTPUBL###'] = $dbObject->first_published;
-            $markerArray['###OCCCOUNTRY###'] = $dbObject->country;
-            $markerArray['###OCCAUTHORS###'] = $dbObject->authors;
-            $markerArray['###OCCPAGE###'] = $dbObject->page;
-            $markerArray['###OCCCROP###'] = $dbObject->type_of_edit;
-            $markerArray['###OCCREPRO###'] = $dbObject->type_of_repro;
-            $markerArray['###OCCPOSINBOOK###'] = $dbObject->pos_in_book;
-            $markerArray['###OCCADDITIONAL###'] = $dbObject->additional;
-            $markerArray['###OCCCONTEXT###'] = $dbObject->context;
-            $markerArray['###OCCSHELF###'] = $dbObject->geisignatur;
-            $markerArray['###OCCLIBLINK###'] = $dbObject->linktolibrary;
-            $markerArray['###OCCMORELINK###'] = $dbObject->linktomore;
-            $markerArray['###OCCSIZEOFIMG###'] = $dbObject->size_of_image;
-
-            $content .= $this->cObj->substituteMarkerArrayCached($template, $markerArray);
-        }
-
-        return $content;
-    }
-
     function singleView($singleID)
     {
         /*   diese Funktion soll eine Einzelansicht erstellen
@@ -166,32 +103,93 @@ class user_europeanicons_pi1 extends tslib_pibase
             $markerArray['###ICONISORIGNAME###'] = $dbObject->name_is_origname;
             $markerArray['###ICONTECHNIQUE###'] = $dbObject->technique;
             $markerArray['###ICONSIZE###'] = $dbObject->size;
-            $markerArray['###ICONOWNER###'] = $dbObject->owner;
+
+            $markerArray['###ICONOWNER###'] = ($dbObject->owner_link != '') ? '<a href="' . $dbObject->owner_link . '" target="_blank" class="icons-external-link">' . $dbObject->owner . '</a>' : $dbObject->owner;
+            /*$markerArray['###ICONOWNER###'] = $dbObject->owner;
             $markerArray['###ICONOWNERLINK###'] = $dbObject->owner_link;
+            */
             $markerArray['###ICONCOMMENT###'] = $dbObject->comment;
 
             $markerArray['###OCCURENCES###'] = $this->occurenceList($param);
 
-            $markerArray['###BACKLINK###'] = $this->pi_linkToPage('Zurück zur Übersicht', $this->id);
+            $markerArray['###BACKLINK###'] = $this->pi_linkTP('Zurück zur Übersicht');
 
             $content .= $this->cObj->substituteMarkerArrayCached($templateOccurence, $markerArray);
         }
 
-
-        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('name,author,image,year', 'user_europeanicons_icon', 'deleted=0 AND hidden=0 AND iconsmm=' . $param, '', 'uid');
-
-        while ($dbObject = mysql_fetch_object($result)) {
-
-            $markerArray['###ICONAUTHOR###'] = $dbObject->author;
-            $markerArray['###ICONYEAR###'] = $dbObject->year;
-
-            $content .= $this->cObj->substituteMarkerArrayCached($templateOccurence, $markerArray);
-        }
-
-        debug($this->piVars);
         return $content;
 
-        //
+    }
+
+    function occurenceList($iconID)
+    {
+        $content = '';
+        $template = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icon-occurencelist.html');
+        //$result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', 'user_europeanicons_occurences', 'deleted=0 AND hidden=0 AND iconMM =' . $iconID, '', 'uid');
+
+        $GLOBALS['TYPO3_DB']->debugOutput = true;
+
+        $result = $GLOBALS['TYPO3_DB']->exec_SELECT_mm_query(
+            'user_europeanicons_occurences.title,user_europeanicons_occurences.publisher,user_europeanicons_occurences.publishing_place,user_europeanicons_occurences.year,user_europeanicons_occurences.reprint,user_europeanicons_occurences.first_published,user_europeanicons_occurences.country,user_europeanicons_occurences.authors,user_europeanicons_occurences.page,user_europeanicons_occurences.type_of_edit,user_europeanicons_occurences.type_of_repro,user_europeanicons_occurences.pos_in_book,user_europeanicons_occurences.additional,user_europeanicons_occurences.context,user_europeanicons_occurences.geisignatur,user_europeanicons_occurences.linktolibrary,user_europeanicons_occurences.linktomore,user_europeanicons_occurences.size_of_image,user_europeanicons_icon.uid',
+            'user_europeanicons_icon', 'user_europeanicons_icon_occurence_mm', 
+            'user_europeanicons_occurences', 
+            'AND user_europeanicons_icon.uid='.$iconID);
+
+        while ($dbObject = mysql_fetch_object($result)) {
+            $markerArray['###OCCTITLE###'] = $dbObject->title;
+            $markerArray['###OCCPUBLISHER###'] = $dbObject->publisher;
+            $markerArray['###OCCPUBLPLACE###'] = $dbObject->publishing_place;
+            $markerArray['###OCCPUBLYEAR###'] = $dbObject->year;
+            $markerArray['###OCCREPR###'] = $dbObject->reprint;
+            $markerArray['###OCCFIRSTPUBL###'] = $dbObject->first_published;
+            $markerArray['###OCCCOUNTRY###'] = $dbObject->country;
+            $markerArray['###OCCAUTHORS###'] = $dbObject->authors;
+            $markerArray['###OCCPAGE###'] = $dbObject->page;
+            $markerArray['###OCCCROP###'] = $dbObject->type_of_edit;
+            $markerArray['###OCCREPRO###'] = $dbObject->type_of_repro;
+            $markerArray['###OCCPOSINBOOK###'] = $dbObject->pos_in_book;
+            $markerArray['###OCCADDITIONAL###'] = $dbObject->additional;
+            $markerArray['###OCCCONTEXT###'] = $dbObject->context;
+            $markerArray['###OCCSHELF###'] = $dbObject->geisignatur;
+            $markerArray['###OCCLIBLINK###'] = $dbObject->linktolibrary;
+            $markerArray['###OCCMORELINK###'] = $dbObject->linktomore;
+            $markerArray['###OCCSIZEOFIMG###'] = $dbObject->size_of_image;
+
+            $content .= $this->cObj->substituteMarkerArrayCached($template, $markerArray);
+        }
+
+        return $content;
+    }
+
+    function IconsList()
+    {
+        $content = '';
+
+        $template = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icons.html');
+        #$result=$GLOBALS['TYPO3_DB']->exec_SELECT_mm_query('user_europeanicons_occurences.*, user_europeanicons_icon.name','user_europeanicons_icon','user_europeanicons_icon_occurence_mm','user_europeanicons_occurences',"AND user_europeanicons_icon.uid=".$categoryID);
+
+        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('uid,name,author,image,year', 'user_europeanicons_icon', 'deleted=0 AND hidden=0', '', 'uid');
+        while ($dbObject = mysql_fetch_object($result)) {
+            $markerArray['###ICONTITLE###'] = $dbObject->name;
+
+            $pfad = 'uploads/user_europeanicons/' . $dbObject->image;
+            $imgConfig = array();
+            $imgConfig['file'] = $pfad;
+            $imgConfig['file.']['maxW'] = 120;
+            $imgConfig['file.']['maxH'] = 80;
+            $bildadresse = $this->cObj->IMG_RESOURCE($imgConfig);
+
+            $markerArray['###ICONLINK###'] = $this->pi_linkTP('Fundstellen für diese Abbildung', array($this->prefixId .
+            '[iconID]' => $dbObject->uid));
+
+            //$markerArray['###LINK###']=$this->pi_linkTP($row['title'],array($this->prefixId.'[item]'=> $row['uid']));
+
+            $markerArray['###ICONIMAGE###'] = "<img src='" . $bildadresse . "'>";
+            $markerArray['###ICONAUTHOR###'] = $dbObject->author;
+            $markerArray['###ICONYEAR###'] = $dbObject->year;
+            $content .= $this->cObj->substituteMarkerArrayCached($template, $markerArray);
+        }
+        return $content;
     }
     /*
      function showLibrary($libraryID){

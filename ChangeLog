@@ -1,4 +1,9 @@
 13-08-28 stange  <stange@gei.de>
+    * Release 0.2.0
+    * all required functions implemented and working.
+    * TODO: Validation of SQL-results, checking for empty fields, semantics
+
+13-08-28 stange  <stange@gei.de>
     * Release 0.1.2
     * backend configuration finally represents the data model.
 
