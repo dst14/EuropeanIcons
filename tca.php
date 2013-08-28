@@ -1,6 +1,8 @@
 <?php
 if (!defined('TYPO3_MODE')) die ('Access denied.');
 
+//TODO Translate Select-Fields
+
 $TCA["user_europeanicons_icon"] = array(
     "ctrl" => $TCA["user_europeanicons_icon"]["ctrl"],
     "interface" => array(

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9059e7cb-46d7-4228-b89d-99cdb04c80b6" name="Default" comment="" />
+    <list default="true" id="9059e7cb-46d7-4228-b89d-99cdb04c80b6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ChangeLog" afterPath="$PROJECT_DIR$/ChangeLog" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ext_emconf.php" afterPath="$PROJECT_DIR$/ext_emconf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tca.php" afterPath="$PROJECT_DIR$/tca.php" />
+    </list>
     <ignored path="user_bibliolist.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377686917526" ignored="false" />
     <file path="/a.dummy" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377239665162" ignored="false" />
     <file path="/locallang_db.xml" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377684995004" ignored="false" />
     <file path="/ext_tables.sql" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377509492206" ignored="false" />
-    <file path="/ChangeLog" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377684183552" ignored="false" />
+    <file path="/ChangeLog" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377687334972" ignored="false" />
     <file path="/icons.css" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377530689487" ignored="false" />
     <file path="/template.html" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377246885948" ignored="false" />
     <file path="/class.user_europeanicons_pi1.php" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377673641913" ignored="false" />
@@ -18,7 +23,8 @@
     <file path="/template.tpl" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377600869255" ignored="false" />
     <file path="/template_icon-occurences.html" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377672491949" ignored="false" />
     <file path="/template_icon-occurencelist.html" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377675408053" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377686902149" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377687350326" ignored="false" />
+    <file path="/README.txt" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377687211685" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +52,7 @@
       <file leaf-file-name="tca.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tca.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="329" column="56" selection-start="12215" selection-end="12215" vertical-scroll-proportion="0.16">
+            <state line="3" column="30" selection-start="89" selection-end="89" vertical-scroll-proportion="0.12">
               <folding />
             </state>
           </provider>
@@ -71,7 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/ts_config.txt" />
         <option value="$PROJECT_DIR$/res/icons.css" />
         <option value="$PROJECT_DIR$/../../deprecation_59d8b6269c.log" />
         <option value="$PROJECT_DIR$/../../deprecation_8fe1b85fe0.log" />
@@ -83,10 +88,11 @@
         <option value="$PROJECT_DIR$/res/template_icon-occurencelist.html" />
         <option value="$PROJECT_DIR$/pi1/class.user_europeanicons_pi1.php" />
         <option value="$PROJECT_DIR$/ext_tables.php" />
-        <option value="$PROJECT_DIR$/ext_emconf.php" />
-        <option value="$PROJECT_DIR$/ChangeLog" />
         <option value="$PROJECT_DIR$/locallang_db.xml" />
+        <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/tca.php" />
+        <option value="$PROJECT_DIR$/ChangeLog" />
+        <option value="$PROJECT_DIR$/ext_emconf.php" />
       </list>
     </option>
   </component>
@@ -173,6 +179,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user_bibliolist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geit3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="typo3conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user_europeanicons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user_bibliolist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geit3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="typo3conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elublog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,7 +357,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -315,7 +365,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6727829" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25445706" sideWeight="0.6722561" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25769854" sideWeight="0.6727829" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25769854" sideWeight="0.6727829" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -399,39 +449,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../elublog/res/class.tx_elublog_eid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.9609508">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../elublog/pi1/class.tx_elublog_pi1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="307" column="67" selection-start="17975" selection-end="17975" vertical-scroll-proportion="2.139219">
-          <folding>
-            <element signature="e#3690#6678#0" expanded="false" />
-            <element signature="e#4067#6678#0" expanded="false" />
-            <element signature="n#singleView#0;n#tx_elublog_pi1#0;n#!!top" expanded="false" />
-            <element signature="e#7231#7667#0" expanded="false" />
-            <element signature="n#getComments#0;n#tx_elublog_pi1#0;n#!!top" expanded="false" />
-            <element signature="n#getCommentForm#0;n#tx_elublog_pi1#0;n#!!top" expanded="false" />
-            <element signature="n#pi_list_makelist#0;n#tx_elublog_pi1#0;n#!!top" expanded="false" />
-            <element signature="e#20504#20830#0" expanded="false" />
-            <element signature="n#pi_list_header#0;n#tx_elublog_pi1#0;n#!!top" expanded="false" />
-            <element signature="n#getFieldHeader#0;n#tx_elublog_pi1#0;n#!!top" expanded="false" />
-            <element signature="n#getFieldHeader_sortLink#0;n#tx_elublog_pi1#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/template.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="24" selection-start="1880" selection-end="1880" vertical-scroll-proportion="0.61799663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../elublog/pi1/tx_elublog_template.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="4121" vertical-scroll-proportion="-0.0">
@@ -474,13 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChangeLog">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="4" selection-start="89" selection-end="89" vertical-scroll-proportion="0.1092233">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ext_localconf.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -491,13 +501,6 @@
     <entry file="file://$PROJECT_DIR$/flexforms/pi1_flexforms.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ext_emconf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="23" selection-start="964" selection-end="964" vertical-scroll-proportion="0.92">
           <folding />
         </state>
       </provider>
@@ -516,9 +519,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ext_emconf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="23" selection-start="964" selection-end="964" vertical-scroll-proportion="0.88">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChangeLog">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../elublog/ChangeLog">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../elublog/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="102" selection-start="187" selection-end="187" vertical-scroll-proportion="0.07281554">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tca.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="329" column="56" selection-start="12215" selection-end="12215" vertical-scroll-proportion="0.16">
+        <state line="3" column="30" selection-start="89" selection-end="89" vertical-scroll-proportion="0.12">
           <folding />
         </state>
       </provider>
