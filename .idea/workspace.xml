@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9059e7cb-46d7-4228-b89d-99cdb04c80b6" name="Default" comment="Templating for singleView, listView&#10;Implementation for singleView">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/template.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/template_icon-occurencelist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pi1/class.user_europeanicons_pi1.php" afterPath="$PROJECT_DIR$/pi1/class.user_europeanicons_pi1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/template_icon-occurences.html" afterPath="$PROJECT_DIR$/res/template_icon-occurences.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/template_icons.html" afterPath="$PROJECT_DIR$/res/template_icons.html" />
+    <list default="true" id="9059e7cb-46d7-4228-b89d-99cdb04c80b6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="user_bibliolist.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377679583689" ignored="false" />
+    <file path="/Dummy.txt" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377679671638" ignored="false" />
     <file path="/a.dummy" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377239665162" ignored="false" />
     <file path="/locallang_db.xml" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377516025717" ignored="false" />
     <file path="/ext_tables.sql" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377509492206" ignored="false" />
@@ -52,7 +47,7 @@
       <file leaf-file-name="class.user_europeanicons_pi1.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi1/class.user_europeanicons_pi1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="12" selection-start="8163" selection-end="8163" vertical-scroll-proportion="0.3315508">
+            <state line="178" column="12" selection-start="8163" selection-end="8163" vertical-scroll-proportion="0.33066666">
               <folding />
             </state>
           </provider>
@@ -61,7 +56,7 @@
       <file leaf-file-name="template_icon-occurencelist.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/template_icon-occurencelist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="17" selection-start="123" selection-end="123" vertical-scroll-proportion="0.75">
+            <state line="3" column="17" selection-start="123" selection-end="123" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
@@ -411,7 +406,11 @@
       <created>1377584071708</created>
       <updated>1377584071708</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Templating for singleView, listView&#10;Implementation for singleView">
+      <created>1377679676216</created>
+      <updated>1377679676216</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -438,18 +437,18 @@
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32874617" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24464832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298217" sideWeight="0.6712538" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298217" sideWeight="0.6727829" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25445706" sideWeight="0.6722561" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25769854" sideWeight="0.6712538" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25769854" sideWeight="0.6727829" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -640,14 +639,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/template_icon-occurencelist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="123" selection-end="123" vertical-scroll-proportion="0.75">
+        <state line="3" column="17" selection-start="123" selection-end="123" vertical-scroll-proportion="-0.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pi1/class.user_europeanicons_pi1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="12" selection-start="8163" selection-end="8163" vertical-scroll-proportion="0.3315508">
+        <state line="178" column="12" selection-start="8163" selection-end="8163" vertical-scroll-proportion="0.33066666">
           <folding />
         </state>
       </provider>
