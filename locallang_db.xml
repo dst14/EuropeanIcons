@@ -2,18 +2,26 @@
 <T3locallang>
     <meta type="array">
         <type>database</type>
-        <description>Language labels for database tables/fields belonging to extension 'user_europeanicons'</description>
+        <description>Language labels for database tables/fields belonging to extension 'user_europeanicons'
+        </description>
     </meta>
     <data type="array">
         <languageKey index="default" type="array">
             <label index="user_europeanicons_icon">Image</label>
-            <label index="user_europeanicons_icon.name">Icon Name</label>
+            <label index="user_europeanicons_icon.name">Icon Name(German)</label>
             <label index="user_europeanicons_icon.image">Icon Image</label>
             <label index="user_europeanicons_icon.author">Author</label>
             <label index="user_europeanicons_icon.year">Year</label>
             <label index="user_europeanicons_icon.place">Place</label>
             <label index="user_europeanicons_icon.country">Country</label>
             <label index="user_europeanicons_icon.linktocommons">Link to commons (Europeana, Wikimedia)</label>
+            <label index="user_europeanicons_icon.l18n_name">Icon Name (original language, if other than German)</label>
+            <label index="user_europeanicons_icon.name_is_origname">Icon Name (German) is original name</label>
+            <label index="user_europeanicons_icon.technique">Technique</label>
+            <label index="user_europeanicons_icon.size">Size</label>
+            <label index="user_europeanicons_icon.owner_link">Link to owner / holding institution</label>
+            <label index="user_europeanicons_icon.owner">Owner / Holding institution</label>
+            <label index="user_europeanicons_icon.comment">Additional comments</label>
             <label index="user_europeanicons_occurences">Occurence of Image</label>
             <label index="user_europeanicons_occurences.iconmm">Icon</label>
             <label index="user_europeanicons_occurences.title">Title</label>
@@ -38,13 +46,20 @@
         </languageKey>
         <languageKey index="de" type="array">
             <label index="user_europeanicons_icon">Abbildung (Icon)</label>
-            <label index="user_europeanicons_icon.name">Bezeichnung der Abbildung</label>
+            <label index="user_europeanicons_icon.name">Titel (dt.)</label>
             <label index="user_europeanicons_icon.image">Bilddatei</label>
             <label index="user_europeanicons_icon.author">Urheber</label>
             <label index="user_europeanicons_icon.year">Jahr</label>
             <label index="user_europeanicons_icon.place">Ort</label>
             <label index="user_europeanicons_icon.country">Land</label>
             <label index="user_europeanicons_icon.linktocommons">Link auf Commons (Europeana, Wikimedia)</label>
+            <label index="user_europeanicons_icon.l18n_name">Originaltitel (falls abweichend vom Deutschen)</label>
+            <label index="user_europeanicons_icon.name_is_origname">Deutscher Titel ist Originaltitel</label>
+            <label index="user_europeanicons_icon.technique">Technik</label>
+            <label index="user_europeanicons_icon.size">Abmessungen</label>
+            <label index="user_europeanicons_icon.owner_link">Link zu Besitzer / besitzender Institution</label>
+            <label index="user_europeanicons_icon.owner">Besitzer / besitzende Institution</label>
+            <label index="user_europeanicons_icon.comment">Bemerkungen</label>
             <label index="user_europeanicons_occurences">Icon-Fundstelle</label>
             <label index="user_europeanicons_occurences.iconmm">Abbildung</label>
             <label index="user_europeanicons_occurences.title">Titel</label>

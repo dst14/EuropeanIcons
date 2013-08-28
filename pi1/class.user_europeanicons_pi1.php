@@ -134,8 +134,6 @@ class user_europeanicons_pi1 extends tslib_pibase
            * sowie einem Link zurück zur Übersicht
         */
 
-        // initialisieren
-
         $param = $singleID;
         $templateOccurence = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icon-occurences.html');
 
