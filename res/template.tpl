@@ -50,34 +50,77 @@ ICONSLINK - Link in Singleansicht
 <h2>Einzelansicht</h2>
 
 <!-- ###SINGLEVIEW### begin -->
-<div class="ei_icon">
-    <div class="ei_image">###IMAGE###</div>
-    <div class="ei_data">
-        <div class="ei_maintitle">###NAME###</div>
-        <div class="ei_subtitle">###ORIGNALNAME### (###TRANSLATED NAME###)</div>
-        <div class="ei_info">###YEAR### ###COUNTRY###</div>
+<div class="icons-iconswrap">
+    <div class="icons-iconimage">
+        ###ICONIMAGE###
+    </div>
+    <div class="icons-icondescription">
+        <h1 class="icons-icontitle">###ICONTITLE###</h1>
+
+        <div class="icons-data">
+            <p><span class="origtitle">###ICONORIGTITLE###</span></p>
+
+            <p>von ###ICONAUTHOR### (###ICONYEAR###, ###ICONPLACE###, ###ICONCOUNTRY###)<br>
+                ###ICONTECHNIQUE###, ###ICONSIZE###<br>
+                ###ICONOWNER###</p>
+
+            <p class="icons-comment">###ICONCOMMENT###</p>
+
+            <p>###ICONLITERATURE###</p>
+
+            <p class="icons-backlink">###BACKLINK###</p>
+        </div>
+
+
+        <div class="icons-occurences">
+            <h2>###OCCHEAD###</h2>
+            ###OCCURENCES###
+        </div>
+        <div class="icons-backlink">###BACKLINK###</div>
+
     </div>
 </div>
-<div class="spacer"></div>
-###BACKLINK###
-<div class="spacer"></div>
-###OCCURENCES###
 <!-- ###SINGLEVIEW### end -->
 
-<h2>Listenansicht</h2>
+<h2> Listenansicht der Fundstellen</h2>
 
 <!-- ###OCCLISTVIEW### begin -->
-<!-- ###ITEM### -->
-<div class="ei_occ">
-    <div class="ei_data">
-        <div class="ei_maintitle">###TITLE### (###PUBLISHER###, ###PUBYEAR###)</div>
-        <div class="ei_subtitle">###ORIGNALNAME### (###TRANSLATED NAME###)</div>
-        <div class="ei_info">###YEAR### ###COUNTRY###</div>
+<div class="icons-occwrap-###EVENODD###">
+    <div class="occ-data">
+        <div class="occ-bookdata">
+            <b>###OCCTITLE###</b> (von ###OCCAUTHORS###)<br>
+            ###OCCPUBLISHER###: ###OCCPUBLPLACE### (###OCCCOUNTRY###), ###OCCPUBLYEAR###.
+            (###OCCREPR###, 1. Aufl.: ###OCCFIRSTPUBL###)
+        </div>
+        <div class="occ-occdata">
+            <p>Abgebildet ###OCCPAGE### (###OCCPOSINBOOK###, ###OCCCONTEXT###, ###OCCCROP###, ###OCCSIZEOFIMG###,
+                ###OCCREPRO###).
+                ###OCCADDITIONAL###</p>
+            ###OCCNACHWEIS### ###OCCMORELINK### ###OCCLIBLINK###
+        </div>
     </div>
 </div>
-<div class="spacer"></div>
-<!-- ###ITEM### -->
 <!-- ###OCCLISTVIEW### end -->
+
+<h2>Listenansicht der Bilder</h2>
+
+<!-- ###ICONLISTVIEW### begin -->
+<
+<div class="icons-iconswrap">
+    <div class="icons-iconimage">
+        ###ICONIMAGE###
+    </div>
+    <div class="icons-icondescription">
+        <div class="icons-icontitle">###ICONTITLE###</div>
+        <div class="icons-data">
+            <p><span class="origtitle">###ICONORIGTITLE###</span></p>
+
+            <p>###ICONAUTHOR###, ###ICONYEAR###</p>
+        </div>
+        <div class="icons-backlink">###ICONLINK###</div>
+    </div>
+</div>
+<!-- ###ICONLISTVIEW### end -->
 
 </body>
 </html>

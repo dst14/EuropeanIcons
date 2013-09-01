@@ -6,7 +6,7 @@ if (!defined('TYPO3_MODE')) die ('Access denied.');
 $TCA["user_europeanicons_icon"] = array(
     "ctrl" => $TCA["user_europeanicons_icon"]["ctrl"],
     "interface" => array(
-        "showRecordFieldList" => "hidden,name,image,author,year,place,country,linktocommons,l18n_name,name_is_origname,technique,size,owner,owner_link,comment"
+        "showRecordFieldList" => "hidden,name,image,author,year,place,country,linktocommons,l18n_name,name_is_origname,technique,size,owner,owner_link,comment,literature"
     ),
     "feInterface" => $TCA["user_europeanicons_icon"]["feInterface"],
     "columns" => array(
@@ -94,8 +94,11 @@ $TCA["user_europeanicons_icon"] = array(
             "exclude" => 1,
             "label" => "LLL:EXT:user_europeanicons/locallang_db.xml:user_europeanicons_icon.name_is_origname",
             "config" => Array(
-                "type" => "input",
-                "size" => "5"
+                "type" => "select",
+                "items" => Array(
+                    Array('ja', 'JA'),
+                    Array('nein', 'NEIN')
+                )
             )
         ),
         "technique" => Array(
@@ -138,11 +141,21 @@ $TCA["user_europeanicons_icon"] = array(
                 "type" => "input",
                 "size" => "30"
             )
+        ),
+        "literature" => Array(
+            "exclude" => 1,
+            "label" => "LLL:EXT:user_europeanicons/locallang_db.xml:user_europeanicons_icon.literature",
+            "config" => Array(
+                "type" => "text",
+                "rows" => "5",
+                "cols" => "30"
+            )
         )
-
     ),
+
+
     "types" => array(
-        "0" => array("showitem" => "hidden;;1;;1-1-1, name,image,author,year,place,country,linktocommons,l18n_name,name_is_origname,technique,size,owner,owner_link,comment")
+        "0" => array("showitem" => "hidden;;1;;1-1-1, name,image,author,year,place,country,linktocommons,l18n_name,name_is_origname,technique,size,owner,owner_link,comment,literature")
     ),
     "palettes" => array(
         "1" => array("showitem" => "")

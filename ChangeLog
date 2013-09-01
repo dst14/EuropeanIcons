@@ -1,23 +1,23 @@
+13-09-01 stange  <stange@gei.de>
+    * Release 0.3.0
+    * very basic evaluation releas
+    * all required functions, basic stylesheets
+    * TODO:
+    * abstraction of templates into subparts of main template
+    * configurability via TypoScript
+    * clean up and make it look nice
+
 13-08-28 stange  <stange@gei.de>
     * Release 0.2.0
     * all required functions implemented and working.
     * bugfix for mm_relations
-    * TODO: Validation of SQL-results, checking for empty fields, semantics
-
-13-08-28 stange  <stange@gei.de>
-    * Release 0.1.2
-    * backend configuration finally represents the data model.
-
-13-08-27 stange  <stange@gei.de>
-    * Release 0.1.1
-    * added basic functionality
 
 13-08-27 stange  <stange@gei.de>
 
-	* Release 0.1.0 alpha
+	* Release 0.1.0
 	* Basic functions implemented, lots of work to do
 
 13-08-26 stange  <stange@gei.de>
 
-	* Initial release 0.0.2 alpha
+	* Initial release 0.0.1
 	* elementary functionality implemented

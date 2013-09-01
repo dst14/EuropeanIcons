@@ -22,6 +22,7 @@
             <label index="user_europeanicons_icon.owner_link">Link to owner / holding institution</label>
             <label index="user_europeanicons_icon.owner">Owner / Holding institution</label>
             <label index="user_europeanicons_icon.comment">Additional comments</label>
+            <label index="user_europeanicons_icon.literature">Bibliography</label>
             <label index="user_europeanicons_occurences">Occurence of Image</label>
             <label index="user_europeanicons_occurences.iconmm">Icon</label>
             <label index="user_europeanicons_occurences.title">Title</label>
@@ -60,6 +61,7 @@
             <label index="user_europeanicons_icon.owner_link">Link zu Besitzer / besitzender Institution</label>
             <label index="user_europeanicons_icon.owner">Besitzer / besitzende Institution</label>
             <label index="user_europeanicons_icon.comment">Bemerkungen</label>
+            <label index="user_europeanicons_icon.literature">Bibliographie</label>
             <label index="user_europeanicons_occurences">Icon-Fundstelle</label>
             <label index="user_europeanicons_occurences.iconmm">Abbildung</label>
             <label index="user_europeanicons_occurences.title">Titel</label>
