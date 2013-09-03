@@ -1,0 +1,90 @@
+.origtitle {
+    font-style: italic;
+}
+
+.icons-iconswrap, .icons-iconswrap-even, .icons-iconswrap-odd {
+    clear: left;
+    border: 1px #555 solid;
+    background-color: #222;
+    height: 100%;
+    margin-bottom: 5px;
+}
+.icons-iconswrap-odd {
+    background-color: #333;
+}
+
+.icons-icondescription {
+    /*float : left;*/
+    margin: 4px;
+    padding: 4px;
+}
+
+.icons-icontitle {
+    font-weight: bold;
+    font-size: 115%;
+}
+
+.icons-data {
+    /*float: left;*/
+}
+
+.icons-iconimage {
+    float: left;
+    margin-right: 8px;
+    margin-top: 12px;
+    margin-left: 12px;
+    margin-bottom: 4px;
+    padding: 4px;
+    background-color: #999;
+    border: 1px #ccc solid;
+}
+
+.icons-owner {
+
+}
+
+.icons-comment {
+
+}
+
+.icons-backlink {
+    clear: left;
+
+}
+
+.icons-occurences {
+    float: none;
+    clear: both;
+}
+
+.icons-occwrap-even, .icons-occwrap-odd {
+    clear: left;
+    border-top: 2px solid #555;
+    border-top: 1px solid #111;
+    background-color: #333;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 5px;
+}
+
+.icons-occwrap-even {
+    background-color: #444;
+    border-top: 2px solid #666;
+    border-top: 1px solid #222;
+}
+
+.occurences-headline {
+
+}
+
+.occ-data {
+
+}
+
+.occ-bookdata {
+
+}
+
+.icons-occdata {
+
+}

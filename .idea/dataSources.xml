@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="40204362">
+  <component name="DataSourceManagerImpl" format="xml" hash="4026844055">
     <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.25a" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )" uuid="3d00994e-be58-4732-9b1b-09f6030f524c">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
@@ -9,14 +9,7 @@
       <jdbc-url>jdbc:mysql://localhost:3306/test2</jdbc-url>
       <user-name>typo3</user-name>
       <user-password>df99dfc5dfdadfd3dfde</user-password>
-      <libraries>
-        <library>
-          <url>jar://$USER_HOME$/Downloads/mysql-connector-java-5.1.26-bin.jar!/</url>
-        </library>
-        <library>
-          <url>file://$USER_HOME$/Downloads/mysql-connector-license.txt</url>
-        </library>
-      </libraries>
+      <libraries />
     </data-source>
   </component>
 </project>

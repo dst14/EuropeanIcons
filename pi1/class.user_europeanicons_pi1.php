@@ -163,10 +163,14 @@ class user_europeanicons_pi1 extends tslib_pibase
     function IconsList()
     {
         $content = '';
+        $evenodd = 'even';
         $template = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icons.html');
 
         $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('uid,name,l18n_name,author,image,year', 'user_europeanicons_icon', 'deleted=0 AND hidden=0', '', 'uid');
         while ($dbObject = mysql_fetch_object($result)) {
+            $markerArray['###EVENODD###'] = $evenodd;
+            $evenodd = ($evenodd == 'odd') ? 'even' : 'odd';
+
             if ($dbObject->name_is_origname == 'JA') {
                 $markerArray['###ICONTITLE###'] = $dbObject->name;
                 $markerArray['###ICONORIGTITLE###'] = '';

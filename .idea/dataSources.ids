@@ -8,14 +8,7 @@
     <jdbc-url>jdbc:mysql://localhost:3306/test2</jdbc-url>
     <user-name>typo3</user-name>
     <user-password>df99dfc5dfdadfd3dfde</user-password>
-    <libraries>
-      <library>
-        <url>jar://$USER_HOME$/Downloads/mysql-connector-java-5.1.26-bin.jar!/</url>
-      </library>
-      <library>
-        <url>file://$USER_HOME$/Downloads/mysql-connector-license.txt</url>
-      </library>
-    </libraries>
+    <libraries/>
     <schema name="" catalog="information_schema"/>
     <schema name="" catalog="t3"/>
     <schema name="" catalog="test"/>
