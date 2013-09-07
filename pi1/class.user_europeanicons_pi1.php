@@ -62,6 +62,13 @@ class user_europeanicons_pi1 extends tslib_pibase
         return $this->pi_wrapInBaseClass($content);
     }
 
+    /**
+     * Creates a a view for a single source
+     *
+     * @param   int $singleID The UID of the source
+     * @return  string The content that is displayed on the website
+     */
+
     function singleView($singleID)
     {
         $param = $singleID;
@@ -114,7 +121,13 @@ class user_europeanicons_pi1 extends tslib_pibase
 
     }
 
-    function occurenceList($iconID, $occID)
+    /**
+     * The method to list all occurences of a specified source
+     *
+     * @param   var $iconID Required UID of an image icon
+     * @return string Content to be parsed into the single view
+     */
+    function occurenceList($iconID = 0)
     {
         $evenodd = 'odd';
         $template = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icon-occurencelist.html');
@@ -159,7 +172,14 @@ class user_europeanicons_pi1 extends tslib_pibase
         return $content;
     }
 
-    function occurenceDetails($occurenceID)
+    /**
+     * Method to enhance the occurence list by adding details for a specific occurence
+     *
+     * @param var $occurenceID required UID of a specific occurence of an image icon
+     * @return string
+     */
+
+    function occurenceDetails($occurenceID = 0)
     {
 
         $template = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icon-occdetails.html');
@@ -198,7 +218,12 @@ class user_europeanicons_pi1 extends tslib_pibase
         return $content;
     }
 
-
+    /**
+     * Default method, displays a list of all image icons
+     *
+     * @return string
+     *
+     */
     function IconsList()
     {
         $content = '';

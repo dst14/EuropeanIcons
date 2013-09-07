@@ -1,11 +1,16 @@
-13-09-01 stange  <stange@gei.de>
-    * Release 0.3.0
-    * very basic evaluation releas
+13-09-06 stange  <stange@gei.de>
+    * Release 0.4.0
+    * quite good alpha status now
     * all required functions, basic stylesheets
+    * NEW: configurability via TypoScript
     * TODO:
     * abstraction of templates into subparts of main template
-    * configurability via TypoScript
     * clean up and make it look nice
+
+13-09-01 stange  <stange@gei.de>
+    * Release 0.3.0
+    * very basic evaluation release
+    * all required functions, basic stylesheets
 
 13-08-28 stange  <stange@gei.de>
     * Release 0.2.0
