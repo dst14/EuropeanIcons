@@ -78,17 +78,19 @@ class user_europeanicons_pi1 extends tslib_pibase
                 $markerArray['###ICONORIGTITLE###'] = $dbObject->l18n_name;
             }
 
+
             $pfad = 'uploads/user_europeanicons/' . $dbObject->image;
             $imgConfig = array();
+
             $imgConfig['file'] = $pfad;
-            $imgConfig['file.']['maxW'] = 240;
-            $imgConfig['file.']['maxH'] = 160;
-            // TODO Anbindung an TypoScript / Receive data for scaling via TS
-            // TODO Skalieren ordentlich machen / Do scaling properly
+            $imgConfig['file.']['maxW'] = ($this->conf['singleW'] != 0) ? $this->conf['singleW'] : 240;
+
             $bildadresse = $this->cObj->IMG_RESOURCE($imgConfig);
             //TODO lightbox für die Vergößerung / Integrate LightBox onClick
 
-            $markerArray['###ICONIMAGE###'] = "<img src='" . $bildadresse . "'>";
+            $markerArray['###ICONIMAGE###'] = $this->cObj->cImage($bildadresse, array(
+                'altText' => $dbObject->name
+            ));
             $markerArray['###ICONAUTHOR###'] = $dbObject->author;
             $markerArray['###ICONYEAR###'] = $dbObject->year;
             $markerArray['###ICONPLACE###'] = $dbObject->place;
@@ -112,29 +114,66 @@ class user_europeanicons_pi1 extends tslib_pibase
 
     }
 
-    function occurenceList($iconID)
+    function occurenceList($iconID, $occID)
     {
-        $content = '';
         $evenodd = 'odd';
         $template = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icon-occurencelist.html');
 
         $result = $GLOBALS['TYPO3_DB']->exec_SELECT_mm_query(
-            'user_europeanicons_occurences.title,user_europeanicons_occurences.publisher,user_europeanicons_occurences.publishing_place,user_europeanicons_occurences.year,user_europeanicons_occurences.reprint,user_europeanicons_occurences.first_published,user_europeanicons_occurences.country,user_europeanicons_occurences.authors,user_europeanicons_occurences.page,user_europeanicons_occurences.type_of_edit,user_europeanicons_occurences.type_of_repro,user_europeanicons_occurences.pos_in_book,user_europeanicons_occurences.additional,user_europeanicons_occurences.context,user_europeanicons_occurences.geisignatur,user_europeanicons_occurences.linktolibrary,user_europeanicons_occurences.linktomore,user_europeanicons_occurences.size_of_image,user_europeanicons_icon.uid',
+            'user_europeanicons_occurences.uid AS occUID,user_europeanicons_occurences.title,user_europeanicons_occurences.publisher,user_europeanicons_occurences.publishing_place,user_europeanicons_occurences.year,user_europeanicons_occurences.reprint,user_europeanicons_occurences.first_published,user_europeanicons_occurences.country,user_europeanicons_occurences.authors,user_europeanicons_occurences.page,user_europeanicons_occurences.type_of_edit,user_europeanicons_occurences.type_of_repro,user_europeanicons_occurences.pos_in_book,user_europeanicons_occurences.additional,user_europeanicons_occurences.context,user_europeanicons_occurences.geisignatur,user_europeanicons_occurences.linktolibrary,user_europeanicons_occurences.linktomore,user_europeanicons_occurences.size_of_image,user_europeanicons_icon.uid',
             'user_europeanicons_occurences', 'user_europeanicons_icon_occurence_mm', 'user_europeanicons_icon',
             'AND user_europeanicons_icon.uid=' . $iconID);
 
         while ($dbObject = mysql_fetch_object($result)) {
+
+            $currentOcc = $dbObject->occUID;
+            $occID = $this->piVars['occID'];
             $markerArray['###EVENODD###'] = $evenodd;
             $evenodd = ($evenodd == 'odd') ? 'even' : 'odd';
 
             $markerArray['###OCCTITLE###'] = $dbObject->title;
-            $markerArray['###OCCPUBLISHER###'] = $dbObject->publisher;
-            $markerArray['###OCCPUBLPLACE###'] = $dbObject->publishing_place;
             $markerArray['###OCCPUBLYEAR###'] = $dbObject->year;
-            $markerArray['###OCCREPR###'] = $dbObject->reprint;
-            $markerArray['###OCCFIRSTPUBL###'] = $dbObject->first_published;
             $markerArray['###OCCCOUNTRY###'] = $dbObject->country;
             $markerArray['###OCCAUTHORS###'] = $dbObject->authors;
+
+            if ($currentOcc == $occID) {
+
+                $markerArray['###OCCDETAILS###'] = $this->occurenceDetails($currentOcc);
+                $markerArray['###OCCDETAILSLINK###'] = '';
+            }
+
+            else {
+                $markerArray['###OCCDETAILS###'] = '';
+
+                $parameter = array(
+                    $this->prefixId.'[iconID]' => $iconID,
+                    $this->prefixId.'[occID]' => $currentOcc
+                );
+                $markerArray['###OCCDETAILSLINK###'] = $this->pi_linkTP('Details', $parameter);
+            }
+
+            $content .= $this->cObj->substituteMarkerArrayCached($template, $markerArray);
+
+        }
+
+        return $content;
+    }
+
+    function occurenceDetails($occurenceID)
+    {
+
+        $template = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icon-occdetails.html');
+
+        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
+            'uid,title,publisher,publishing_place,year,reprint,first_published,country,authors,page,type_of_edit,type_of_repro,pos_in_book,additional,context,geisignatur,linktolibrary,linktomore,size_of_image',
+            'user_europeanicons_occurences',
+            'deleted=0 AND hidden=0 AND uid=' . $occurenceID, '', 'uid');
+
+        while ($dbObject = mysql_fetch_object($result)) {
+            $markerArray['###OCCPUBLISHER###'] = $dbObject->publisher;
+            $markerArray['###OCCPUBLPLACE###'] = $dbObject->publishing_place;
+            $markerArray['###OCCREPR###'] = $dbObject->reprint;
+            $markerArray['###OCCFIRSTPUBL###'] = $dbObject->first_published;
             $markerArray['###OCCPAGE###'] = ($dbObject->page > 0) ? 'auf S. ' . $dbObject->page : 'auf dem Cover';
             $markerArray['###OCCCROP###'] = $dbObject->type_of_edit;
             $markerArray['###OCCREPRO###'] = $dbObject->type_of_repro;
@@ -150,7 +189,6 @@ class user_europeanicons_pi1 extends tslib_pibase
                 $markerArray['###OCCNACHWEIS###'] = $markerArray['###OCCLIBLINK###'] = $markerArray['###OCCMORELINK###'] = '';
             }
 
-
             $markerArray['###OCCSIZEOFIMG###'] = $dbObject->size_of_image;
 
             $content .= $this->cObj->substituteMarkerArrayCached($template, $markerArray);
@@ -159,6 +197,7 @@ class user_europeanicons_pi1 extends tslib_pibase
 
         return $content;
     }
+
 
     function IconsList()
     {
@@ -181,13 +220,16 @@ class user_europeanicons_pi1 extends tslib_pibase
             $pfad = 'uploads/user_europeanicons/' . $dbObject->image;
             $imgConfig = array();
             $imgConfig['file'] = $pfad;
-            $imgConfig['file.']['maxW'] = 120;
-            $imgConfig['file.']['maxH'] = 80;
+            $imgConfig['file.']['maxW'] = ($this->conf['maxW'] != 0) ? $this->conf['maxW'] : 120;
+
             $bildadresse = $this->cObj->IMG_RESOURCE($imgConfig);
 
             $markerArray['###ICONLINK###'] = $this->pi_linkTP('Fundstellen für diese Abbildung', array($this->prefixId .
             '[iconID]' => $dbObject->uid));
-            $markerArray['###ICONIMAGE###'] = "<img src='" . $bildadresse . "'>";
+            $markerArray['###ICONIMAGE###'] = $this->cObj->cImage($bildadresse, array(
+                'altText' => $dbObject->name
+            ));
+
             $markerArray['###ICONAUTHOR###'] = $dbObject->author;
             $markerArray['###ICONYEAR###'] = $dbObject->year;
             $content .= $this->cObj->substituteMarkerArrayCached($template, $markerArray);
