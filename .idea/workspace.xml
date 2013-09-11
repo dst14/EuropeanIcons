@@ -6,7 +6,7 @@
     </list>
     <ignored path="user_bibliolist.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1378114182736" ignored="false" />
+    <file path="/Dummy.txt" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1378714305145" ignored="false" />
     <file path="/a.dummy" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377239665162" ignored="false" />
     <file path="/locallang_db.xml" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1377810525217" ignored="false" />
     <file path="/ext_tables.sql" changelist="9059e7cb-46d7-4228-b89d-99cdb04c80b6" time="1378036655027" ignored="false" />
@@ -47,10 +47,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="icons.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="class.user_europeanicons_pi1.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pi1/class.user_europeanicons_pi1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="243" column="13" selection-start="11457" selection-end="11457" vertical-scroll-proportion="7.936">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icons.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/icons.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="14" selection-start="709" selection-end="709" vertical-scroll-proportion="0.4661215">
+            <state line="56" column="14" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -100,10 +109,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1280" />
     <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="1002" />
+    <option name="width" value="1281" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -188,17 +196,25 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="options.lastSelected" value="Configurable.PHP.CodeSniffer" />
     <property name="recentsLimit" value="5" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Sites/mysql-connector-java-5.1.26-bin.jar" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="Lokaler Server" serverId="d403a193-50a5-4d27-ba49-a602f99482f5">
     <servers>
+      <server id="31989ee5-fcd5-4b59-9617-e926afbcc39f">
+        <serverdata />
+      </server>
       <server id="48a2d4d5-2f55-4dfe-af2b-86270fc2b227">
         <serverdata />
       </server>
@@ -319,25 +335,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1280" y="22" width="1280" height="1002" extended-state="6" />
+    <frame x="0" y="22" width="1281" height="774" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276644" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24464832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32658023" sideWeight="0.6712538" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25445706" sideWeight="0.6722561" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21393842" sideWeight="0.6723356" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263158" sideWeight="0.6737805" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32955465" sideWeight="0.6707317" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2347561" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262195" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24464832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25445706" sideWeight="0.6722561" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21781376" sideWeight="0.6707317" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3246951" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3276644" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -443,46 +460,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ext_tables.sql">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="9" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.1262136" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tca.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="41" selection-start="3651" selection-end="3651" vertical-scroll-proportion="0.27784577">
-          <folding />
-        </state>
+        <state line="99" column="41" selection-start="3651" selection-end="3651" vertical-scroll-proportion="0.27784577" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/template_icon-occurencelist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="22" selection-end="648" vertical-scroll-proportion="0.02970297">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="22" selection-end="648" vertical-scroll-proportion="0.02970297" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/template_icon-occurences.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="24" selection-end="842" vertical-scroll-proportion="0.027726432">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="24" selection-end="842" vertical-scroll-proportion="0.027726432" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/template.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="12" selection-start="3454" selection-end="3454" vertical-scroll-proportion="-15.125">
-          <folding />
-        </state>
+        <state line="114" column="12" selection-start="3454" selection-end="3454" vertical-scroll-proportion="-15.125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/template_icons.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="24" selection-end="466" vertical-scroll-proportion="0.027726432">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="24" selection-end="466" vertical-scroll-proportion="0.027726432" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../elublog/pi1/class.tx_elublog_pi1.php">
@@ -492,28 +499,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ext_emconf.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="23" selection-start="964" selection-end="964" vertical-scroll-proportion="-14.375">
-          <folding />
-        </state>
+        <state line="31" column="23" selection-start="964" selection-end="964" vertical-scroll-proportion="-14.375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChangeLog">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="36" selection-start="283" selection-end="283" vertical-scroll-proportion="0.18584071">
+        <state line="7" column="36" selection-start="283" selection-end="283" vertical-scroll-proportion="0.18584071" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="14" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pi1/class.user_europeanicons_pi1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="0" selection-start="10036" selection-end="10036" vertical-scroll-proportion="1.2367865">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/icons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="14" selection-start="709" selection-end="709" vertical-scroll-proportion="0.4661215">
+        <state line="243" column="13" selection-start="11457" selection-end="11457" vertical-scroll-proportion="7.936">
           <folding />
         </state>
       </provider>
