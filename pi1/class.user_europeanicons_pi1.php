@@ -46,8 +46,7 @@ class user_europeanicons_pi1 extends tslib_pibase
      * @param        array $conf: The PlugIn configuration
      * @return        The content that is displayed on the website
      */
-
-    function main($content, $conf)
+        function main($content, $conf)
     {
         $this->conf = $conf;
         $this->pi_setPiVarDefaults();
@@ -68,7 +67,6 @@ class user_europeanicons_pi1 extends tslib_pibase
      * @param   int $singleID The UID of the source
      * @return  string The content that is displayed on the website
      */
-
     function singleView($singleID)
     {
         $param = $singleID;
@@ -178,7 +176,6 @@ class user_europeanicons_pi1 extends tslib_pibase
      * @param var $occurenceID required UID of a specific occurence of an image icon
      * @return string
      */
-
     function occurenceDetails($occurenceID = 0)
     {
 
@@ -261,6 +258,58 @@ class user_europeanicons_pi1 extends tslib_pibase
         }
         return $content;
     }
+
+    /**
+     * buildInheritanceTree parst die bildgeschichtliche Vererbung des Motivs
+     *
+     * @param int $sourceID
+     * @return string
+     */
+    function buildInheritanceTree($sourceID = 0) {
+        $param = (int) $sourceID;
+
+        if ($sourceID = 0) {$tree = '';}
+
+        else {
+            // hier müssen nun die Iterationen der Vererbung durchgeführt werden
+            $tree = 'level';
+        }
+
+        return $tree;
+    }
+
+    /**
+ * IconHasChildren checks if a certain item is parent to at least one child element
+ *
+ * @param int $iconID
+ * @return bool
+ */
+    function IconHasChildren($iconID = 0) {
+        $param = (int) $iconID;
+        $hasChildren = false;
+        $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('parent_uid', 'user_europeanicons_icon', 'deleted=0 AND hidden=0 AND parent_uid=' . $param, '', 'parent_uid');
+
+        if (mysql_num_rows($result) != 0) {
+            $hasChildren = true;
+        }
+        return $hasChildren;
+    }
+
+    /**
+     * getChildrenFromRoot fetches all child elements from a specified root
+     * @param int $iconID
+     * @return array
+     */
+    function getChildrenFromRoot($iconID = 0) {
+        $param = (int) $iconID;
+        $return = array();
+        if ($param != 0) {
+
+        }
+
+        return $return;
+    }
+
 
 }
 

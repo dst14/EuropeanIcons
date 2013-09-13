@@ -6,7 +6,7 @@ if (!defined('TYPO3_MODE')) die ('Access denied.');
 $TCA["user_europeanicons_icon"] = array(
     "ctrl" => $TCA["user_europeanicons_icon"]["ctrl"],
     "interface" => array(
-        "showRecordFieldList" => "hidden,name,image,author,year,place,country,linktocommons,l18n_name,name_is_origname,technique,size,owner,owner_link,comment,literature"
+        "showRecordFieldList" => "hidden,name,image,author,year,place,country,linktocommons,l18n_name,name_is_origname,technique,size,owner,owner_link,comment,literature,is_child,parent_uid"
     ),
     "feInterface" => $TCA["user_europeanicons_icon"]["feInterface"],
     "columns" => array(
@@ -150,12 +150,36 @@ $TCA["user_europeanicons_icon"] = array(
                 "rows" => "5",
                 "cols" => "30"
             )
+        ),
+        "is_child" => Array(
+            "exclude" => 1,
+            "label" => "LLL:EXT:user_europeanicons/locallang_db.xml:user_europeanicons_icon.is_child",
+            "config" => Array(
+                "type" => "select",
+                "items" => Array(
+                    Array('nein', '0'),
+                    Array('ja', '1')
+                )
+            )
+        ),
+        "parent_uid" => Array(
+            "displayCond" => 'FIELD:is_child:>:0',
+            "exclude" => 1,
+            "label" => 'LLL:EXT:user_europeanicons/locallang_db.xml:user_europeanicons_icon.parent_uid',
+            "config" => Array (
+                "type" => 'select',
+                "items" => Array (
+                    Array('', 0),
+                ),
+                "foreign_table" => 'user_europeanicons_icon',
+                "foreign_table_where" => 'ORDER BY [foreign_table].uid',
+            )
         )
     ),
 
 
     "types" => array(
-        "0" => array("showitem" => "hidden;;1;;1-1-1, name,image,author,year,place,country,linktocommons,l18n_name,name_is_origname,technique,size,owner,owner_link,comment,literature")
+        "0" => array("showitem" => "hidden;;1;;1-1-1, name,image,author,year,place,country,linktocommons,l18n_name,name_is_origname,technique,size,owner,owner_link,comment,literature,is_child,parent_uid")
     ),
     "palettes" => array(
         "1" => array("showitem" => "")

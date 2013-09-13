@@ -72,6 +72,9 @@ CREATE TABLE user_europeanicons_icon (
   owner_link       TINYTEXT,
   comment          TEXT,
   literature       TEXT,
+  is_child BOOLEAN DEFAULT FALSE,
+  parent_uid int(11) DEFAULT '0' NOT NULL
+
   PRIMARY KEY (uid),
   KEY parent (pid)
 );
