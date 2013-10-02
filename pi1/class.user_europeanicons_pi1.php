@@ -74,7 +74,7 @@ class user_europeanicons_pi1 extends tslib_pibase
 
         $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('name,author,image,year,place,country,linktocommons,l18n_name,name_is_origname,technique,size,owner,owner_link,comment,literature', 'user_europeanicons_icon', 'deleted=0 AND hidden=0 AND uid=' . $param, '', 'uid');
 
-        while ($dbObject = mysql_fetch_object($result)) {
+        while ($dbObject = mysqli_fetch_object($result)) {
             if ($dbObject->name_is_origname == 'JA') {
                 $markerArray['###ICONTITLE###'] = $dbObject->name;
                 $markerArray['###ICONORIGTITLE###'] = '';
@@ -135,7 +135,7 @@ class user_europeanicons_pi1 extends tslib_pibase
             'user_europeanicons_occurences', 'user_europeanicons_icon_occurence_mm', 'user_europeanicons_icon',
             'AND user_europeanicons_icon.uid=' . $iconID);
 
-        while ($dbObject = mysql_fetch_object($result)) {
+        while ($dbObject = mysqli_fetch_object($result)) {
 
             $currentOcc = $dbObject->occUID;
             $occID = $this->piVars['occID'];
@@ -186,7 +186,7 @@ class user_europeanicons_pi1 extends tslib_pibase
             'user_europeanicons_occurences',
             'deleted=0 AND hidden=0 AND uid=' . $occurenceID, '', 'uid');
 
-        while ($dbObject = mysql_fetch_object($result)) {
+        while ($dbObject = mysqli_fetch_object($result)) {
             $markerArray['###OCCPUBLISHER###'] = $dbObject->publisher;
             $markerArray['###OCCPUBLPLACE###'] = $dbObject->publishing_place;
             $markerArray['###OCCREPR###'] = $dbObject->reprint;
@@ -228,7 +228,7 @@ class user_europeanicons_pi1 extends tslib_pibase
         $template = $this->cObj->fileResource('EXT:user_europeanicons/res/template_icons.html');
 
         $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('uid,name,l18n_name,author,image,year', 'user_europeanicons_icon', 'deleted=0 AND hidden=0', '', 'uid');
-        while ($dbObject = mysql_fetch_object($result)) {
+        while ($dbObject = mysqli_fetch_object($result)) {
             $markerArray['###EVENODD###'] = $evenodd;
             $evenodd = ($evenodd == 'odd') ? 'even' : 'odd';
 
@@ -289,7 +289,7 @@ class user_europeanicons_pi1 extends tslib_pibase
         $hasChildren = false;
         $result = $GLOBALS['TYPO3_DB']->exec_SELECTquery('parent_uid', 'user_europeanicons_icon', 'deleted=0 AND hidden=0 AND parent_uid=' . $param, '', 'parent_uid');
 
-        if (mysql_num_rows($result) != 0) {
+        if (mysqli_num_rows($result) != 0) {
             $hasChildren = true;
         }
         return $hasChildren;
